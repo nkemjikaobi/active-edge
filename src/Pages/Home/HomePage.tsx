@@ -1,10 +1,11 @@
+import BasePageLayout from 'Components/BasePageLayout/BasePageLayout'
 import React from 'react'
 
 const HomePage = () => {
     return (
-        <div>
+        <BasePageLayout>
             Home Page
-        </div>
+        </BasePageLayout>
     )
 }
 
