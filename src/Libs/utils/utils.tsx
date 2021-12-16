@@ -1,4 +1,3 @@
-import axios from 'axios';
 // /**
 //  * Compose a number of styles together easily
 //  * @ty {String} styles Classes/styles to be applied
