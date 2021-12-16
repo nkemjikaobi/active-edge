@@ -25,4 +25,4 @@ VOLUME ["/app", "/var/log/applications/applogs"]
 EXPOSE 3000
 
 # Start the app
-CMD ["yarn", "start"]
+CMD ["npm", "run", "start"]
