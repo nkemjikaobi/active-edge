@@ -6,12 +6,14 @@ import {
 	GET_ARTISTS_ALBUMS_FAIL,
 	GET_ALBUM_PHOTOS_SUCCESS,
 	GET_ALBUM_PHOTOS_FAIL,
+	GET_TWEETS_SUCCESS,
 } from '../../Types/StudioTypes/index';
 
 const IStudioState = {
 	artists: null,
 	artistsAlbums: null,
 	albumPhotos: null,
+	tweets: null,
 	error: null,
 	loading: false,
 };
@@ -22,6 +24,12 @@ const studioReducer = (state = IStudioState, action: any) => {
 			return {
 				...state,
 				artists: action.payload.data,
+				loading: false,
+			};
+		case GET_TWEETS_SUCCESS:
+			return {
+				...state,
+				tweets: action.payload.data,
 				loading: false,
 			};
 		case GET_ARTISTS_ALBUMS_SUCCESS:
