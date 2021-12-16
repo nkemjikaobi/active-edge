@@ -20,7 +20,7 @@ const Artist: React.FunctionComponent<IArtist> = ({ artist }) => {
 				</div>
 				<div className='col-md-3'>
 					<Link to={`/artist/${id}`} className='btn btn-secondary'>
-						Artist Details
+						Artist Albums
 					</Link>
 				</div>
 			</div>
