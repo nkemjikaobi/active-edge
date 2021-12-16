@@ -17,7 +17,7 @@ const AlbumPage = () => {
 	);
 
 	//Filter the albums belonging to the artist
-	const artistAlbums: Array<IAlbum> = albums.filter(
+	const artistAlbums: Array<IAlbum> = albums && albums.filter(
 		album => `${album.userId}` === id
 	);
 
