@@ -1,12 +1,15 @@
-import BasePageLayout from 'Components/BasePageLayout/BasePageLayout'
-import React from 'react'
+import Artists from 'Components/Artists/Artists';
+import BasePageLayout from 'Components/BasePageLayout/BasePageLayout';
+
 
 const HomePage = () => {
-    return (
-        <BasePageLayout>
-            Home Page
-        </BasePageLayout>
-    )
-}
+	
 
-export default HomePage
+	return (
+		<BasePageLayout>
+			<Artists />
+		</BasePageLayout>
+	);
+};
+
+export default HomePage;

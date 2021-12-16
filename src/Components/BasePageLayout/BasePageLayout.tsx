@@ -1,3 +1,4 @@
+import { composeClasses } from 'Libs/utils/utils';
 import React, { Fragment } from 'react';
 import styles from './BasePageLayout.module.scss';
 
@@ -8,7 +9,7 @@ const BasePageLayout: React.FunctionComponent<IBasePageLayout> = ({
 	children,
 }) => {
 	return (
-		<section className={styles.basePageLayout}>
+		<section className={composeClasses(styles.basePageLayout, 'container')}>
 			<h1>Chocolate City Studios</h1>
 			<main className={styles.children}>{children}</main>
 		</section>

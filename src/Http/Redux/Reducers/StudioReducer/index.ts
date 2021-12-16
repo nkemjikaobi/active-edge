@@ -14,7 +14,7 @@ const studioReducer = (state = IStudioState, action: any) => {
 		case GET_ARTISTS_SUCCESS:
 			return {
 				...state,
-				artists: action.payload,
+				artists: action.payload.data,
 			};
 		case GET_ARTISTS_FAIL:
 			return {
