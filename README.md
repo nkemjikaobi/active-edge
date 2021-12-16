@@ -37,5 +37,7 @@ To run, install node, then
 
 Feel free to choose whatver rocks your boat.
 
-The assessment wasnt completed but what was done was superb.
+The assessment wasnt completed but what was done was superb [Structure, Interfaces and the likes].
+
+Happy Hacking!!!.
 
