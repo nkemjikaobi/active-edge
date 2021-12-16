@@ -4,7 +4,11 @@ import axios from 'axios';
 import {
 	GET_ARTISTS_URL,
 	GATEWAY_API_ROUTE,
+	GET_ALBUM_PHOTOS_URL,
+	GET_ARTISTS_ALBUMS_URL,
 } from 'Http/Routes/StudioRoutes/index';
+import IAlbumPhoto from 'dto/Studio/IAlbumPhoto';
+import IAlbum from 'dto/Studio/IAlbum';
 
 const authAxios = axios.create({
 	baseURL: GATEWAY_API_ROUTE,
@@ -14,27 +18,6 @@ const authAxios = axios.create({
 });
 
 class StudioService {
-	// /**
-	//  * Method to get all artists
-	//  * @param email
-	//  * @returns result IWallet
-	//  */
-	// public static CreateWallet = async (
-	// 	customer_email: string
-	// ): Promise<IWallet> => {
-	// 	let result: any;
-	// 	const payload = {
-	// 		customer_email: customer_email,
-	// 	};
-
-	// 	try {
-	// 		const wallet = await authAxios.post(CREATE_WALLET_URL, payload);
-	// 		result = wallet.data.data;
-	// 		localStorage.setItem('wallet', JSON.stringify(result));
-	// 	} catch (error: any) {}
-	// 	return result;
-	// };
-
 	/**
 	 * Method to get all artists
 	 * @returns result Array<IArtists>
@@ -44,8 +27,38 @@ class StudioService {
 
 		try {
 			const artists = await authAxios.get(GET_ARTISTS_URL);
-			console.log({ artists });
 			result = artists;
+		} catch (error: any) {}
+		return result;
+	};
+
+	/**
+	 * Method to get all artistes albums
+	 * @returns result Array<IAlbum>
+	 */
+	public static GetArtistsAlbums = async (): Promise<Array<IAlbum>> => {
+		let result: any;
+
+		try {
+			const artistsAlbums = await authAxios.get(GET_ARTISTS_ALBUMS_URL);
+			result = artistsAlbums;
+		} catch (error: any) {}
+		return result;
+	};
+
+	/**
+	 * Method to get all album photos
+	 * @param album_id
+	 * @returns result Array<IAlbumPhoto>
+	 */
+	public static GetAlbumPhotos = async (
+		album_id: number
+	): Promise<Array<IAlbumPhoto>> => {
+		let result;
+
+		try {
+			const albumPhotos = await authAxios.get(GET_ALBUM_PHOTOS_URL(album_id));
+			result = albumPhotos.data.data;
 		} catch (error: any) {}
 		return result;
 	};
