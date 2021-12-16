@@ -91,7 +91,6 @@ class StudioService {
 		try {
 			const tweet = await authAxios.post(TWEET_URL, tweetDetails);
 			result = tweet.data;
-			console.log({ result });
 		} catch (error: any) {}
 		return result;
 	};
@@ -106,7 +105,6 @@ class StudioService {
 		try {
 			const tweet = await authAxios.put(MODIFY_TWEET_URL(comment_id));
 			result = tweet.data;
-			console.log({ result });
 		} catch (error: any) {}
 		return result;
 	};
@@ -121,7 +119,6 @@ class StudioService {
 		try {
 			const tweet = await authAxios.delete(MODIFY_TWEET_URL(comment_id));
 			result = tweet.data;
-			console.log({ result });
 		} catch (error: any) {}
 		return result;
 	};
