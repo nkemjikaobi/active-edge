@@ -28,7 +28,7 @@ const Tweets = () => {
 			{loading ? (
 				<div>Loading...</div>
 			) : (
-				tweets.map((tweet: ITweet) => (
+				tweets && tweets.map((tweet: ITweet) => (
 					<TweetItem key={tweet.id} tweet={tweet} />
 				))
 			)}

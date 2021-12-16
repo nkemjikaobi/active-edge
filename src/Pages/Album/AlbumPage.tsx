@@ -21,7 +21,7 @@ const AlbumPage = () => {
 		return () => {
 			mounted = false;
 		};
-	}, [id]);
+	}, []);
 
 	const albums: Array<IAlbum> = useSelector(
 		(state: any) => state.studio.artistsAlbums
@@ -33,7 +33,7 @@ const AlbumPage = () => {
 	return (
 		<BasePageLayout>
 			<h4>Albums</h4>
-			{artistAlbums.map((album: IAlbum) => {
+			{artistAlbums && artistAlbums.map((album: IAlbum) => {
 				return <ArtistAlbums key={album.id} album={album} />;
 			})}
 			<Link to='/' className='btn btn-secondary'>
