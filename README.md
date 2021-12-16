@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). using Typescript
 
-For some reaso, when I deployed and dockerized...only the home page fetches data..Other pages couldn't.(No time to debug this so you can just run the app locally or better still run with docker and twll me what the you think the issue was ...Gracias..)
+For some reason, when I deployed and dockerized...only the home page fetches data..Other pages couldn't.(No time to debug this so you can just run the app locally or better still run with docker and twll me what the you think the issue was ...Gracias..)
 
 ## Available Scripts
 
