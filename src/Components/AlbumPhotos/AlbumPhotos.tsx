@@ -1,4 +1,5 @@
 import AlbumPhoto from 'Components/AlbumPhoto/AlbumPhoto';
+import BasePageLayout from 'Components/BasePageLayout/BasePageLayout';
 import IAlbumPhoto from 'dto/Studio/IAlbumPhoto';
 import {
 	getAlbumPhotosAction,
@@ -26,7 +27,7 @@ const AlbumPhotos = () => {
 		};
 	}, []);
 	return (
-		<div>
+		<BasePageLayout>
 			{loading ? (
 				<div>Loading...</div>
 			) : (
@@ -38,7 +39,7 @@ const AlbumPhotos = () => {
 			<Link to='/' className='btn btn-secondary'>
 				Go Home
 			</Link>
-		</div>
+		</BasePageLayout>
 	);
 };
 
