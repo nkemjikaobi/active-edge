@@ -12,14 +12,6 @@ import ArtistAlbums from 'Components/ArtistAlbums/ArtistAlbums';
 const AlbumPage = () => {
 	const { id }: any = useParams();
 	const dispatch = useDispatch();
-	const albums: Array<IAlbum> = useSelector(
-		(state: any) => state.studio.artistsAlbums
-	);
-
-	//Filter the albums belonging to the artist
-	const artistAlbums: Array<IAlbum> = albums && albums.filter(
-		album => `${album.userId}` === id
-	);
 
 	useEffect(() => {
 		let mounted = true;
@@ -29,7 +21,15 @@ const AlbumPage = () => {
 		return () => {
 			mounted = false;
 		};
-	}, []);
+	}, [id]);
+
+	const albums: Array<IAlbum> = useSelector(
+		(state: any) => state.studio.artistsAlbums
+	);
+
+	//Filter the albums belonging to the artist
+	const artistAlbums: Array<IAlbum> =
+		albums && albums.filter(album => `${album.userId}` === id);
 	return (
 		<BasePageLayout>
 			<h4>Albums</h4>
