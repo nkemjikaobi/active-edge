@@ -52,7 +52,7 @@ export const getArtistsAlbumsAction = () => async (dispatch: any) => {
 //Get Tweets Action
 export const getTweetsAction = () => async (dispatch: any) => {
 	try {
-		const res = await StudioService.GetAllTweets;
+		const res = await StudioService.GetAllTweets();
 		dispatch({
 			type: GET_TWEETS_SUCCESS,
 			payload: res,

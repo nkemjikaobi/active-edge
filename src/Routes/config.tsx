@@ -2,6 +2,7 @@ import HomePage from 'Pages/Home/HomePage';
 import RouteModel from 'Models/IRouteModel';
 import AlbumPage from 'Pages/Album/AlbumPage';
 import AlbumPhotos from 'Components/AlbumPhotos/AlbumPhotos';
+import TweetPage from 'Pages/Tweet/TweetPage';
 
 const config: Array<RouteModel> = [
 	{
@@ -21,6 +22,12 @@ const config: Array<RouteModel> = [
 		exact: true,
 		auth: false,
 		component: AlbumPhotos,
+	},
+	{
+		path: '/tweets',
+		exact: true,
+		auth: false,
+		component: TweetPage,
 	},
 ];
 

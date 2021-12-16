@@ -7,6 +7,7 @@ import {
 	GET_ALBUM_PHOTOS_SUCCESS,
 	GET_ALBUM_PHOTOS_FAIL,
 	GET_TWEETS_SUCCESS,
+	GET_TWEETS_FAIL,
 } from '../../Types/StudioTypes/index';
 
 const IStudioState = {
@@ -50,6 +51,12 @@ const studioReducer = (state = IStudioState, action: any) => {
 				error: action.payload,
 				loading: false,
 			};
+		case GET_TWEETS_FAIL:
+			return {
+				...state,
+				error: action.payload,
+				loading: false,
+			}
 		case GET_ARTISTS_ALBUMS_FAIL:
 			return {
 				...state,

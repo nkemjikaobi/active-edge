@@ -87,11 +87,6 @@ class StudioService {
 	 */
 	public static PostTweet = async (tweetDetails: ITweet): Promise<ITweet> => {
 		let result: any;
-		// const payload: ITweet = {
-		// 	wallet_id: walletDetails.wallet_id,
-		// 	currency: walletDetails.currency,
-		// 	amount: walletDetails.amount,
-		// };
 
 		try {
 			const tweet = await authAxios.post(TWEET_URL, tweetDetails);
