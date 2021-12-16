@@ -1,6 +1,13 @@
 @import '../../assets/styles/shared-styles.scss';
 .basePageLayout {
 	overflow: hidden;
+	h1 {
+		text-align: center;
+		font-size: to-rem(40);
+		font-family: fantasy;
+		margin: to-rem(48);
+		color: color(White);
+	}
 	.children {
 		max-width: to-rem(1440);
 		margin: 0 auto;
