@@ -11,8 +11,7 @@ import { useParams } from 'react-router-dom';
 const AlbumPhotos = () => {
 	const dispatch = useDispatch();
 	const albumPhotos = useSelector((state: any) => state.studio.albumPhotos);
-	// const loading = useSelector((state: any) => state.studio.loading);
-	const loading = true;
+	const loading = useSelector((state: any) => state.studio.loading);
 	const { id }: any = useParams();
 
 	useEffect(() => {
