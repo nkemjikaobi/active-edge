@@ -6,7 +6,7 @@ import {
 } from 'Http/Redux/Actions/StudioActions';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const AlbumPhotos = () => {
 	const dispatch = useDispatch();
@@ -35,6 +35,9 @@ const AlbumPhotos = () => {
 					<AlbumPhoto key={album.id} album={album} />
 				))
 			)}
+			<Link to='/' className='btn btn-secondary'>
+				Go Home
+			</Link>
 		</div>
 	);
 };
