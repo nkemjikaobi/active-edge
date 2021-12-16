@@ -32,7 +32,7 @@
 		"web-vitals": "^2.1.0"
 	},
 	"scripts": {
-		"docker:bash": "docker-compose -p chocolate-city run --service-ports",
+		"docker:bash": "docker-compose up",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",

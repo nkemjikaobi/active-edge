@@ -23,3 +23,6 @@ VOLUME ["/app", "/var/log/applications/applogs"]
 
 # Expose app port
 EXPOSE 3000
+
+# Start the app
+CMD ["yarn", "start"]
