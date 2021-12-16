@@ -21,8 +21,11 @@ const Artists = () => {
 
 	useEffect(() => {
 		let mounted = true;
-		dispatch(setLoadingAction());
-		dispatch(getArtistsAction());
+		if (mounted) {
+			dispatch(setLoadingAction());
+			dispatch(getArtistsAction());
+		}
+
 		return () => {
 			mounted = false;
 		};

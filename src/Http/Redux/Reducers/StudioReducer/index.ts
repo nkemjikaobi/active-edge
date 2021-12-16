@@ -33,7 +33,7 @@ const studioReducer = (state = IStudioState, action: any) => {
 		case GET_ALBUM_PHOTOS_SUCCESS:
 			return {
 				...state,
-				albumPhotos: action.payload.data,
+				albumPhotos: action.payload,
 				loading: false,
 			};
 		case GET_ARTISTS_FAIL:

@@ -58,7 +58,7 @@ class StudioService {
 
 		try {
 			const albumPhotos = await authAxios.get(GET_ALBUM_PHOTOS_URL(album_id));
-			result = albumPhotos.data.data;
+			result = albumPhotos.data;
 		} catch (error: any) {}
 		return result;
 	};
