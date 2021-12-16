@@ -1,17 +1,17 @@
+import StudioService from 'Http/Services/StudioService';
 import {
 	GET_ARTISTS_SUCCESS,
 	GET_ARTISTS_FAIL,
 	SET_LOADING,
 } from '../../Types/StudioTypes/index';
-import axios from 'axios';
 
-//Get Artists
-export const getArtists = () => async (dispatch: any) => {
+//Get Artists Action
+export const getArtistsAction = () => async (dispatch: any) => {
 	try {
-		const res = await axios.get('');
+		const res = await StudioService.GetArtists();
 		dispatch({
 			type: GET_ARTISTS_SUCCESS,
-			payload: res.data,
+			payload: res,
 		});
 	} catch (error: any) {
 		dispatch({
@@ -21,8 +21,8 @@ export const getArtists = () => async (dispatch: any) => {
 	}
 };
 
-//Set BookLoading
-export const setBookLoading = () => async (dispatch: any) => {
+//Set BookLoading Action
+export const setLoadingAction = () => async (dispatch: any) => {
 	dispatch({
 		type: SET_LOADING,
 	});
