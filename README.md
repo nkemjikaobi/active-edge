@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Live link => [https://chocolate-city-active-edge.netlify.app/](https://chocolate-city-active-edge.netlify.app/)
+
 Run using docker:
 
 ### `git clone git@github.com:nkemjikaobi/active-edge.git`
